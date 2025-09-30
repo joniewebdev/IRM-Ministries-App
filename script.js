@@ -17,6 +17,11 @@ document.getElementById("login-form").addEventListener("submit", function(event)
   loginUser(user, pass);
 });
 
+document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await supa.auth.signOut();
+    window.location.href = "./index.html";
+});
+
 async function loginUser(email, password) {
     var { data, error } = await supa.auth.signInWithPassword({
         email: email,
@@ -31,3 +36,15 @@ async function loginUser(email, password) {
       window.location.href = "./home.html";
     }, 2000);
 }
+
+async function checkAuth() {
+    const { data: { session } } = await supa.auth.getSession();
+
+    if (!session) {
+    window.location.href = "./index.html";
+    } else {
+        window.location.href = "./home.html";
+    }
+}
+
+checkAuth();
