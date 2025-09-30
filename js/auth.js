@@ -6,6 +6,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function requireAuth(redirectTo = "index.html") {
   const { data: { session } } = await supabase.auth.getSession();
+  if (!session) window.location.href = redirectTo;
   return session;
 }
 
