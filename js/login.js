@@ -10,7 +10,19 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   if (error) {
     document.getElementById("login-message").innerText = "Login failed: " + error.message;
   } else {
-    document.getElementById("login-message").innerText = "Login successful!";
-    setTimeout(() => window.location.href = "home.html", 1500);
+    document.getElementById("login-message").innerHTML = `
+        <div class="success-checkmark">
+            <div class="check-icon">
+                <span class="icon-line line-tip"></span>
+                <span class="icon-line line-long"></span>
+                <div class="icon-circle"></div>
+                <div class="icon-fix"></div>
+            </div>
+        </div>
+    `;
+    setTimeout(() =>
+        {
+            window.location.href = "home.html"
+        }, 1500);
   }
 });

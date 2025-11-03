@@ -4,13 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./css/home.css">
   <link rel="icon" href="./icons/irm-icon-192.jpg" type="image/jpg">
 </head>
 <body>
   <div class="container">
-    <h2>Hello</h2>
-    <button id="logoutBtn">Logout</button>
+    <div class="title">
+      <h2>IRM Ministries Pagsanjan</h2>
+    </div>
+    <div class="body">
+      <div class="buttons">
+        <div class="attendanceBtn">
+          <a href="">
+              <img class="imgBtn" src="./icons/attendance2.png">
+            <span>Attendance</span>
+          </a>
+        </div>
+        <div class="registerBtn">
+          <a href="">
+            <img class="imgBtn" src="./icons/register.png">
+            <span>Add member</span>
+          </a>
+        </div>
+      </div>  
+    </div>
+    <div class="bottomDiv">
+      <button class="bottomBtn" id="signUpButton">Sign up User</button>
+      <button class="bottomBtn" id="logoutBtn">Logout</button>
+    </div>
   </div>
 
   <script type="module" src="./js/home.js"></script>
