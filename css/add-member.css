@@ -26,7 +26,7 @@ html, body {
 }
 
 .label {
-  flex: 1;
+  flex: 2;
   padding: 10px;
   font-weight: bold;
   text-align: right;
@@ -41,4 +41,29 @@ html, body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+
+.backBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #23913d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.add-member {
+  padding: 10px 20px;
+  border: none;
+  background-color: #23913d;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
 }

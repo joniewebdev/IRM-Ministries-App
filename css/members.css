@@ -22,6 +22,22 @@ html, body {
   display: flex;
 }
 
+.backBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #23913d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .members-list {
   display: flex;
   flex-direction: column;
@@ -71,7 +87,6 @@ html, body {
   font-weight: bold;
   display: inline-block;
   font-size: 20px;
-  border-radius: 10px;
   cursor: pointer;
 }
 

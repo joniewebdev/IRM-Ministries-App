@@ -4,6 +4,10 @@ if (!session) {
   window.location.href = "./index.html";
 }
 
+document.querySelector(".backBtn").addEventListener("click", () => {
+    window.location.href = "./members.html";
+});
+
 const { data:orgs, error } = await supabase
   .from("organization_unit")
   .select("*")
