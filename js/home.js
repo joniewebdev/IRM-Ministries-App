@@ -4,9 +4,9 @@ if (!session) {
   window.location.href = "./index.html";
 }
 
-document.querySelector(".attendance-btn").addEventListener("click", () => {
-  window.location.href = "./attendance.html";
-});
+// document.querySelector(".attendance-btn").addEventListener("click", () => {
+//   window.location.href = "./attendance.html";
+// });
 
 document.querySelector(".member-btn").addEventListener("click", () => {
   window.location.href = "./members.html";
