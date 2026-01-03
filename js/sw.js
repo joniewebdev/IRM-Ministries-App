@@ -7,7 +7,7 @@ self.addEventListener("install", (event) => {
         "./home.html",
         "./styles.css",
         "./js/login.js",
-        "./js/home.js",
+        "./js/home.js", 
         "./js/supabaseClient.js",
         "./js/icons/irm-icon-192.jpg",
         "./js/icons/irm-icon-512.jpg",

@@ -1,0 +1,97 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  justify-content: center;
+}
+
+.title, .body {
+  display: flex;
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.members-list .member:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.members-list .member:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.member {
+  display: flex;
+  width: 95%;
+  align-items: center;
+}
+
+.member-info {
+  flex: 5;
+  padding: 10px;
+}
+
+.member-edit {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.member-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.edit-button {
+  background-color: #23913d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-member-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #23913d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.add-member-icon {
+  width: 60px;
+  height: 60px;
+  filter: invert(1);
+}

@@ -19,7 +19,7 @@ html, body {
   display: flex;
 }
 
-.title, .bottomDiv {
+.title, .bottom-div {
   flex: 1;
 }
 
@@ -43,7 +43,7 @@ a {
   color: black;
 }
 
-.attendanceBtn, .registerBtn {
+.attendance-btn, .member-btn {
   width: 120px;
   height: 120px;
   display: flex;
@@ -57,14 +57,15 @@ a {
   background-color: #fafafa;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  cursor: pointer;
 }
 
-.imgBtn {
+.img-btn {
   width: 80%;
   height: auto;
 }
 
-.bottomBtn {
+.bottom-btn {
   padding: 10px 15px;
   margin: 0px 10px;
   border: none;

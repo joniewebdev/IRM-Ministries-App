@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRM Ministries - Add a member</title>
+    <link rel="stylesheet" href="./css/add-member.css">
+    <link rel="icon" href="./icons/irm-icon-192.jpg" type="image/jpg">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Add a member</h2>
+        </div>
+        <form id="add-member-form">
+            <div class="member-data">
+                <div class="label">First Name</div>
+                <div class="input-field">
+                    <input type="text" id="first-name" required>
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Middle Name</div>
+                <div class="input-field">
+                    <input type="text" id="middle-name" placeholder="optional">
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Last Name</div>
+                <div class="input-field">
+                    <input type="text" id="last-name" required>
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Nickname</div>
+                <div class="input-field">
+                    <input type="text" id="nickname">
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Suffix</div>
+                <div class="input-field">
+                    <select name="suffix" id="suffix">
+                        <option value="">--</option>
+                        <option value="Jr.">Jr.</option>
+                        <option value="Sr.">Sr.</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                    </select>
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Birth date</div>
+                <div class="input-field">
+                    <input type="date" required id="birth-date">
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Address</div>
+                <div class="input-field">
+                    <input type="text" required id="address">
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Kapisanan</div>
+                <div class="input-field">
+                    <select name="org-id" id="org-id"></select>
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Date of membership</div>
+                <div class="input-field">
+                    <input type="date" required id="effectivity-date">
+                </div>
+            </div>
+            <div class="submit-btn-div">
+                <button type="submit" class="add-member">Add Member</button>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="./js/add-member.js"></script>
+</body>
+</html>
