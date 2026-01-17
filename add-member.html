@@ -11,7 +11,7 @@
     <div class="container">
         <button class="backBtn">Back</button>
         <div class="title">
-            <h2>Add a member</h2>
+            <h2>ADD A MEMBER</h2>
         </div>
         <form id="add-member-form">
             <div class="member-data">
@@ -54,9 +54,19 @@
                 </div>
             </div>
             <div class="member-data">
+                <div class="label">Gender</div>
+                <div class="input-field">
+                    <select name="gender" id="gender" required>
+                        <option value="">--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="member-data">
                 <div class="label">Birth date</div>
                 <div class="input-field">
-                    <input type="date" required id="birth-date">
+                    <input type="date" id="birth-date">
                 </div>
             </div>
             <div class="member-data">

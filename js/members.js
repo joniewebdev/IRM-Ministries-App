@@ -31,7 +31,7 @@ if (data && data.length > 0) {
         <div>${member.membership ? member.membership[0].org_id : "N/A"}</div>
       </div>
       <div class="member-edit">
-        <button class="edit-button" href="">></button>
+        <button class="edit-button" onclick="window.location.href='./view-member.html?personId=${member.person_id}'">></button>
       </div>
     `;
     document.querySelector(".members-list").appendChild(memberDiv);

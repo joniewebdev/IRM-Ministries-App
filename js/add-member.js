@@ -36,6 +36,7 @@ document.getElementById("add-member-form").addEventListener("submit", async (e) 
     let last_name = document.getElementById("last-name").value;
     let nickname = document.getElementById("nickname").value;
     let suffix = document.getElementById("suffix").value;
+    let gender = document.getElementById("gender").value;
     let birth_date = document.getElementById("birth-date").value;
     let address = document.getElementById("address").value;
     let org_id = document.getElementById("org-id").value;
@@ -50,6 +51,7 @@ document.getElementById("add-member-form").addEventListener("submit", async (e) 
         nickname: emptyToNull(nickname),
         middle_name: emptyToNull(middle_name),
         suffix: emptyToNull(suffix),
+        gender: emptyToNull(gender),
         birth_date,
         address
         }
