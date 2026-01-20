@@ -8,6 +8,16 @@ document.querySelector(".backBtn").addEventListener("click", () => {
     window.location.href = "./members.html";
 });
 
+const currentYear = new Date().getFullYear();
+const yearDropdown = document.getElementById("year-joined");
+
+for (let year = currentYear; year >= currentYear - 40; year--) {  
+  const option = document.createElement("option");
+  option.value = year;
+  option.textContent = year;
+  yearDropdown.appendChild(option);
+}
+
 const { data:orgs, error } = await supabase
   .from("organization_unit")
   .select("*")
@@ -24,8 +34,6 @@ if (orgs && orgs.length > 0) {
   }
 }
 
-document.getElementById("effectivity-date").valueAsDate = new Date();
-
 const emptyToNull = (value) =>
   value === "" || value === undefined ? null : value;
 
@@ -40,42 +48,33 @@ document.getElementById("add-member-form").addEventListener("submit", async (e) 
     let birth_date = document.getElementById("birth-date").value;
     let address = document.getElementById("address").value;
     let org_id = document.getElementById("org-id").value;
-    let effectivity_date = document.getElementById("effectivity-date").value;
+    let year_joined = document.getElementById("year-joined").value;
+    let is_member = document.getElementById("is-member").checked ? 'N' : 'Y';
+    let status = document.getElementById("status").value;
+
 
     const { data, error } = await supabase
     .from("person")
     .insert([
         {
         first_name,
+        middle_name: emptyToNull(middle_name),
         last_name,
         nickname: emptyToNull(nickname),
-        middle_name: emptyToNull(middle_name),
         suffix: emptyToNull(suffix),
         gender: emptyToNull(gender),
-        birth_date,
-        address
+        birth_date: emptyToNull(birth_date),
+        address: emptyToNull(address),
+        org_id: emptyToNull(org_id),
+        year_joined: emptyToNull(year_joined),
+        is_member: is_member,
+        status_id: status
         }
-    ])
-    .select("person_id")
-    .single();
+    ]);
 
     if (error) {
     console.error(error);
     } else {
-        const person_id = data.person_id;
-        const { data: membershipData, error: membershipError } = await supabase
-        .from("membership")
-        .insert([
-            {
-            person_id,
-            org_id,
-            effectivity_date
-            }
-        ]);   
-        if (membershipError) {
-            console.error(membershipError);
-        } else {
-            window.location.href = "./members.html";
+          window.location.href = "./members.html";
         }
-    }   
 });

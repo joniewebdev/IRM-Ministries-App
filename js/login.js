@@ -1,5 +1,14 @@
 import { supabase } from "./supabaseClient.js";
 
+const passwordInput = document.getElementById("password");
+const toggle = document.getElementById("togglePassword");
+
+toggle.addEventListener("click", () => {
+  const isHidden = passwordInput.type === "password";
+  passwordInput.type = isHidden ? "text" : "password";
+  toggle.textContent = isHidden ? "🙈" : "👁";
+});
+
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;

@@ -13,9 +13,7 @@ const memberId = params.get("personId");
 
 const { data, error } = await supabase
   .from("person")
-  .select(`
-    *, membership (*)
-  `)
+  .select(`*`)
   .eq("person_id", memberId)
   .order("first_name", {
     ascending: true
@@ -28,15 +26,9 @@ if (data) {
     document.getElementById("gender").textContent = data.gender ? data.gender : "N/A";
     document.getElementById("birth-date").textContent = data.birth_date ? data.birth_date : "";
     document.getElementById("address").textContent = data.address ? data.address : "";
-    document.getElementById("org-id").textContent = data.membership && data.membership.length > 0 ? data.membership[0].org_id : "N/A";
-    const el = document.getElementById("effectivity-date");
-
-    if (data.membership?.length) {
-    const date = new Date(data.membership[0].effectivity_date);
-    el.textContent = date.toISOString().split("T")[0];
-    } else {
-    el.textContent = "N/A";
-    }
+    document.getElementById("org-id").textContent = data.org_id ? data.org_id : "N/A";
+    document.getElementById("year-joined").textContent = data.year_joined ? data.year_joined : "N/A";
+    document.getElementById("status").textContent = data.status_id ? data.status_id : "N/A";
 }
 
 if (error) console.error(error);

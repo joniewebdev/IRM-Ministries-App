@@ -15,7 +15,7 @@ input {
   border-radius: 5px;
 }
 
-button {
+.loginBtn {
   padding: 10px 20px;
   border: none;
   background-color: #23913d;
@@ -61,6 +61,34 @@ button {
     width: 250px;
     height: 250px;
 }
+
+.password-wrapper {
+  position: relative;
+  width: 90%;          /* SAME as input width */
+}
+
+.password-wrapper input {
+  width: 100%;         /* fills the wrapper */
+  padding-right: 40px; /* space for eye */
+  box-sizing: border-box;
+}
+
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+
 
 .success-checkmark {
     width: 80px;

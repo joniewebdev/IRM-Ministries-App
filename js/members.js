@@ -11,13 +11,10 @@ document.querySelector(".backBtn").addEventListener("click", () => {
 // get members
 const { data, error } = await supabase
   .from("person")
-  .select(`
-    *, membership (*)
-  `)
+  .select(` *`)
   .order("first_name", {
     ascending: true
-  })
-  .limit(1, { foreignTable: "membership" });
+  });
 
 if (error) console.error(error);
 
@@ -28,7 +25,7 @@ if (data && data.length > 0) {
     memberDiv.innerHTML = `
       <div class="member-info">
         <div class="member-name">${member.first_name}${member.middle_name ? " " + member.middle_name[0] + "." : ""} ${member.last_name}${member.suffix ? " " + member.suffix : ""}</div>
-        <div>${member.membership ? member.membership[0].org_id : "N/A"}</div>
+        <div>${member.org_id ? member.org_id : "N/A"}</div>
       </div>
       <div class="member-edit">
         <button class="edit-button" onclick="window.location.href='./view-member.html?personId=${member.person_id}'">></button>
@@ -42,6 +39,8 @@ else{
     memberDiv.innerHTML = `No members found.`;
     document.querySelector(".members-list").appendChild(memberDiv);
 }
+
+document.querySelector(".loader").style.display = "none";
 
 // add member button
 document.querySelector(".add-member-btn").addEventListener("click", () => {

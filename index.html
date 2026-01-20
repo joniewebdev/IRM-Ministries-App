@@ -12,11 +12,16 @@
   <div class="container">
     <img src="./icons/irm-icon-512.jpg" class="login-logo" alt="">
     <div class="login-box">
-      <h2>LOGIN</h2>
+      <h2>Login</h2>
       <form id="login-form">
-        <input type="email" id="email" placeholder="email" required>
-        <input type="password" id="password" placeholder="password" required>
-        <button type="submit">Login</button>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" id="togglePassword">👁</span>
+        </div>
+
+        <button type="submit" class="loginBtn">Login</button>
       </form>
       <div id="login-message"></div>
     </div>

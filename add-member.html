@@ -72,19 +72,40 @@
             <div class="member-data">
                 <div class="label">Address</div>
                 <div class="input-field">
-                    <textarea required id="address"></textarea>
+                    <textarea id="address"></textarea>
                 </div>
             </div>
             <div class="member-data">
                 <div class="label">Kapisanan</div>
                 <div class="input-field">
-                    <select name="org-id" id="org-id"></select>
+                    <select name="org-id" id="org-id" required>
+                        <option value="">--</option>
+                    </select>
                 </div>
             </div>
             <div class="member-data">
-                <div class="label">Date of membership</div>
+                <div class="label">Year Joined</div>
                 <div class="input-field">
-                    <input type="date" required id="effectivity-date">
+                    <select name="year-joined" id="year-joined">
+                        <option value="">--</option>
+                    </select>
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Unlisted?</div>
+                <div class="input-field">
+                    <input type="checkbox" id="is-member">
+                </div>
+            </div>
+            <div class="member-data">
+                <div class="label">Status</div>
+                <div class="input-field">
+                    <select name="status" id="status" required>
+                        <option value="">--</option>
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                        <option value="ABROAD">Abroad</option>
+                    </select>    
                 </div>
             </div>
             <div class="submit-btn-div">
