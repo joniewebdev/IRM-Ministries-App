@@ -100,6 +100,7 @@ html, body {
   height: 60px;
   background-color: #23913d;
   border-radius: 50%;
+  border: 3px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
