@@ -37,10 +37,10 @@ const memberDiv = document.createElement("div");
 memberDiv.classList.add("member");
 memberDiv.innerHTML = `
       <div class="member-info">
-        <div class="member-name">}</div>
-        <div></div>
+        <div class="member-name"> </div>
+        <div> </div>
       </div>
-      <div class="member-edit"></div>
+      <div class="member-edit"> </div>
      `;
 document.querySelector(".members-list").appendChild(memberDiv);
 document.querySelector(".members-list").appendChild(memberDiv);
