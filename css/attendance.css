@@ -11,9 +11,27 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+    height: 100%;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
+.create-attendance-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #23913d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.create-attendance-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
 }
