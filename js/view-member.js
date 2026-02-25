@@ -33,27 +33,33 @@ if (data) {
 
 if (error) console.error(error);
 
+async function deleteMember(id) {
+    if (!confirm("Are you sure you want to delete this member?")) return;
+
+    const { error } = await supabase
+        .from("person")
+        .delete()
+        .eq("person_id", id);
+
+    if (error) {
+        console.error(error);
+        alert("Error deleting member.");
+        return;
+    }
+
+    alert("Member deleted successfully.");
+    window.location.href = "./members.html";
+}
+
 document.querySelector(".buttons").innerHTML = `
-    <button class="button" id="edit-button"
-        onclick="window.location.href='./edit-member.html?personId=${memberId}'">
-        Edit
-    </button>
+    <button class="button" id="edit-button">Edit</button>
+    <button class="button" id="delete-button">Delete</button>
 `;
 
-// async function deleteMember(id) {
-//     if (!confirm("Are you sure you want to delete this member?")) return;
+document.getElementById("edit-button").addEventListener("click", () => {
+    window.location.href = `./add-member.html?personId=${memberId}`;
+});
 
-//     const { error } = await supabase
-//         .from("person")
-//         .delete()
-//         .eq("person_id", id);
-
-//     if (error) {
-//         console.error(error);
-//         alert("Error deleting member.");
-//         return;
-//     }
-
-//     alert("Member deleted successfully.");
-//     window.location.href = "./members.html";
-// }
+document.getElementById("delete-button").addEventListener("click", () => {
+    deleteMember(memberId);
+});

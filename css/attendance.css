@@ -35,3 +35,33 @@ html, body {
   height: 30px;
   filter: invert(1);
 }
+
+.backBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #23913d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #23913d; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
