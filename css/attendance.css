@@ -52,9 +52,20 @@ html, body {
   cursor: pointer;
 }
 
+.attendance-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+
 .loader {
-  border: 10px solid #f3f3f3; /* Light grey */
-  border-top: 10px solid #23913d; /* Blue */
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #23913d;
   border-radius: 50%;
   width: 50px;
   height: 50px;

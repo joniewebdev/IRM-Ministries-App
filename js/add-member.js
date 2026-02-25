@@ -31,12 +31,13 @@ if (orgs && orgs.length > 0) {
 }
 
 const params = new URLSearchParams(window.location.search);
-if (params) {
+if (params.get("personId")) {
   document.querySelector(".header").textContent = "EDIT MEMBER";
   document.querySelector(".backBtn").addEventListener("click", () => {
     window.location.href = "./view-member.html?personId=" + personId;
   });
   const personId = params.get("personId");
+  
   const { data: member, error } = await supabase
     .from("person")
     .select("*")
